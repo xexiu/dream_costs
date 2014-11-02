@@ -65,7 +65,7 @@
   padding: 0; }
 
 body {
-  color: #8c989e;
+  color: #333;
   font-size: 16px;
   font-style: normal;
   line-height: 1;
@@ -139,7 +139,7 @@ dl {
   padding: 10px;
   width: 900px;
   margin: 40px auto;
-  opacity: .9; }
+  opacity: .8; }
   #main span#logo {
     width: 190px;
     height: 35px;
@@ -255,8 +255,8 @@ dl {
   #main article {
     border-bottom: 2px dotted #f1f1f1; }
     #main article:hover {
-      border-left: 2px solid #f1f1f1;
-      border-right: 2px solid #f1f1f1; }
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent; }
   #main article header {
     text-align: left;
     margin-left: 120px;
@@ -268,7 +268,7 @@ dl {
     color: #384047;
     font-size: 18px; }
   #main article p a {
-    color: #8c989e; }
+    color: #333; }
   #main article img.img-center {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

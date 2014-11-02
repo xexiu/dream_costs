@@ -102,7 +102,7 @@ dl {
   //background-color: black;
   width: 900px;
   margin: 40px auto;
-  opacity: .9;
+  opacity: .8;
   // Logo
   span#logo {
     width: 190px;
@@ -211,8 +211,8 @@ dl {
   article {
     border-bottom: 2px dotted #f1f1f1;
     &:hover {
-      border-left: 2px solid #f1f1f1;
-      border-right: 2px solid #f1f1f1;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
     }
   }
   article header {

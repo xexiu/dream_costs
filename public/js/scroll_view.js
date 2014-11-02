@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var beaches = JSON.parse(data);
 // Fixed position Left Menu when scrolling
 $(window).scroll(function(){
   $("#menu_items").css({
@@ -8,90 +9,105 @@ $(window).scroll(function(){
   );
 });
 
+$('article[class^="cf "]').each(function(item){
+  var a = $(item);
+  console.log(a.height());
+});
+var item = $('.menu_item').height()+10;
+var result = $(".TossadeMar").offset().top;
+var result3 = $(".TossadeMar").height();
+var result4 = result+result3-item;
+console.log(result4);
+// console.log(item);
+// console.log(result2);
+// console.log(result3);
+
 // Left side SPY when scrolling
-$(window).scroll(function(){
+$(document).scroll(function(){
   var pageY = pageYOffset;
-  console.log(pageY);
-  if (pageY > 100 && pageY < 225 ) {
+  console.log(pageY)
+  if (pageY > result && pageY <= result4) {
+    // console.log('hi');
   // $('#0').removeClass('active');
   $('#tag_1').addClass('active');
 }else{
   $('#tag_1').removeClass('active');
 }
 
-if (pageY > 225 && pageY < 338) {
+if (pageY >= result4) {
+  // console.log('hi');
   $('#tag_2').addClass('active');
 }else{
   $('#tag_2').removeClass('active');
 }
 
-if (pageY > 338 && pageY < 450) {
-  $('#tag_3').addClass('active');
-}else{
-  $('#tag_3').removeClass('active');
-}
+// if (pageY > 335 && pageY < 465) {
+//   $('#tag_3').addClass('active');
+// }else{
+//   $('#tag_3').removeClass('active');
+// }
 
-if (pageY > 450 && pageY < 560) {
-  $('#tag_4').addClass('active');
-}else{
-  $('#tag_4').removeClass('active');
-}
+// if (pageY > 465 && pageY < 595) {
+//   $('#tag_4').addClass('active');
+// }else{
+//   $('#tag_4').removeClass('active');
+// }
 
-if (pageY > 560 && pageY < 670) {
+if (pageY > 595 && pageY < 725) {
   $('#tag_5').addClass('active');
 }else{
   $('#tag_5').removeClass('active');
 }
 
-if (pageY > 670 && pageY < 780) {
+if (pageY > 725 && pageY < 855) {
   $('#tag_6').addClass('active');
 }else{
   $('#tag_6').removeClass('active');
 }
 
-if (pageY > 780 && pageY < 890) {
+if (pageY > 855 && pageY < 985) {
   $('#tag_7').addClass('active');
 }else{
   $('#tag_7').removeClass('active');
 }
 
-if (pageY > 890 && pageY < 1005) {
+if (pageY > 985 && pageY < 1115) {
   $('#tag_8').addClass('active');
 }else{
   $('#tag_8').removeClass('active');
 }
 
-if (pageY > 1005 && pageY < 1115) {
+if (pageY > 1115 && pageY < 1245) {
   $('#tag_9').addClass('active');
 }else{
   $('#tag_9').removeClass('active');
 }
 
-if (pageY > 1115 && pageY < 1225) {
+if (pageY > 1245 && pageY < 1375) {
   $('#tag_10').addClass('active');
 }else{
   $('#tag_10').removeClass('active');
 }
 
-if (pageY > 1225 && pageY < 1335) {
+if (pageY > 1375 && pageY < 1505) {
   $('#tag_11').addClass('active');
 }else{
   $('#tag_11').removeClass('active');
 }
 
-if (pageY > 1335 && pageY < 1445) {
+if (pageY > 1505 && pageY < 1635) {
   $('#tag_12').addClass('active');
 }else{
   $('#tag_12').removeClass('active');
 }
 
-if (pageY > 1445 && pageY < 1560) {
+if (pageY > 1635 && pageY < 1765) {
   $('#tag_13').addClass('active');
 }else{
   $('#tag_13').removeClass('active');
 }
 
-if (pageY > 1560 && pageY < 1670) {
+if (pageY > 1765 && pageY < 1895) {
   $('#tag_14').addClass('active');
 }else{
   $('#tag_14').removeClass('active');
@@ -100,7 +116,7 @@ if (pageY > 1560 && pageY < 1670) {
 
 $("#tag_1").bind("click", function() {
   $('body').animate({
-    scrollTop: $('.TossadeMar').offset().top
+    scrollTop: $('.TossadeMar').offset().top+10
 }, 1000); //scroll to div with container as ID.
     return false; //Prevent Default and event bubbling.
   });
@@ -108,7 +124,7 @@ $("#tag_1").bind("click", function() {
 $("#tag_2").bind("click", function() {
   //$('#10').addClass('active');
   $('body').animate({
-    scrollTop: $('.Begur').offset().top
+    scrollTop: $('.Begur').offset().top+10
 }, 1000); //scroll to div with container as ID.
     return false; //Prevent Default and event bubbling.
   });
