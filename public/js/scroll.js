@@ -118,7 +118,7 @@ $(document).on('click', '#tag_3', function(){
 $(document).on("click", '#tag_4', function(){
   //$('#10').addClass('active');
   $('body').animate({
-    scrollTop: $('.SantFeliudeGuíxols').offset().top-50
+    scrollTop: $('.SantFeliudeGuí­xols').offset().top
 }, 1000); //scroll to div with container as ID.
     return false; //Prevent Default and event bubbling.
   });
