@@ -42,7 +42,7 @@ $(document).ready(function() {
       var p_content = '<a href="'+beaches[i].name.replace(/[\s+'']/g, "").toLowerCase()+'.html">' + beaches[i].description + '</a>';
       p.innerHTML = p_content;
       var aside = document.createElement('aside');
-      var aside_content = '<a href="">Vote Down</a><a href="">Vote Up</a>';
+      var aside_content = '<a href=""><i class="fa fa-thumbs-down"></i></a><a href=""><i class="fa fa-thumbs-up"></i></a>';
       aside.innerHTML = aside_content;
       aside.className = 'thumbs';
       main.appendChild(section).appendChild(article);
