@@ -472,6 +472,10 @@ dl {
   .info {
     margin-left: -70px !important; }
 
+  article.fix p {
+    padding-top: 30px;
+    margin-left: 0px; }
+
   article {
     padding-right: 5px;
     padding-left: 15px;
