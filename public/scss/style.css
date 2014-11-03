@@ -260,14 +260,23 @@ dl {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #f1f1f1; }
+  #main aside.fix {
+    padding-left: 10px;
+    padding-right: 10px; }
+  #main article.fix p {
+    padding-left: 20px;
+    padding-right: 20px; }
   #main article.fix:hover {
     border-left: 0px solid #f1f1f1;
     border-right: 0px solid #f1f1f1; }
-  #main article {
+  #main article.view {
     border-bottom: 2px dotted #f1f1f1; }
-    #main article:hover {
+    #main article.view:hover {
       border-left: 2px solid transparent;
-      border-right: 2px solid transparent; }
+      border-right: 2px solid transparent;
+      background-color: black;
+      opacity: .8;
+      color: white; }
   #main article header {
     text-align: left;
     margin-left: 120px;
@@ -439,14 +448,16 @@ dl {
     margin-left: -70px !important; }
 
   article {
-    margin-top: 15px;
     padding-right: 5px;
     padding-left: 15px;
     text-align: justify;
     border-bottom: 1px solid #f1f1f1;
     padding-bottom: 10px; }
     article p {
-      width: 100%; }
+      width: 100%;
+      margin-left: 70px;
+      margin-top: -30px;
+      float: left; }
     article header {
       text-align: center;
       color: #222;

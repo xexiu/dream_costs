@@ -30,7 +30,7 @@ $(document).ready(function() {
       var aImg = document.createElement('a');
       aImg.href = beaches[i].name.replace(/[\s+'']/g, "").toLowerCase()+'.html';
       var article = document.createElement('article');
-      article.className = 'cf ' + beaches[i].name.replace(/[\s+'']/g, ""); // Replace white spaces and single quotes
+      article.className = 'cf view ' + beaches[i].name.replace(/[\s+'']/g, ""); // Replace white spaces and single quotes
       var header = document.createElement('header');
       var h2 = document.createElement('h2');
       var h2_content = '<a href="'+beaches[i].name.replace(/[\s+'']/g, "").toLowerCase()+'.html">' + beaches[i].name + '</a>';
