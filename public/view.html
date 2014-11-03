@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="voteSystem">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="scss/utility.css">
   <link rel="stylesheet" href="scss/style.css">
   <link rel="stylesheet" href="scss/media.css">
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
   <main id="main" class="cf">
@@ -21,12 +22,14 @@
     </div>
     <aside id="menu_items">
     </aside>
-    <section id="important" class="cf">
+    <section id="important" ng-controller="VoteCtrl" class="cf">
       <h1>Most Voted Coasts</h1>
     </section>
   </main>
+  <!-- jQuery Functions/Apps -->
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/addBeach.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/votes_jquery.js"></script>
 </body>
 </html>
