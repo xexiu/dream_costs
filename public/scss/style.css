@@ -60,6 +60,26 @@
   background: linear-gradient(#2896B6, #2ba6cb);
   box-shadow: 0 2px 0 #21728B, 0 4px 4px rgba(0, 0, 0, 0.6); }
 
+.buttonScroll {
+  background: url(../img/pirate_boat.png) no-repeat;
+  width: 84px;
+  height: 54px;
+  bottom: 91px;
+  margin-left: 15px;
+  position: fixed;
+  display: none;
+  -webkit-filter: blur(0.8px);
+  -moz-filter: blur(0.8px);
+  -o-filter: blur(0.8px);
+  -ms-filter: blur(0.8px);
+  filter: blur(0.8px); }
+  .buttonScroll:hover {
+    -webkit-filter: blur(0.2px);
+    -moz-filter: blur(0.2px);
+    -o-filter: blur(0.2px);
+    -ms-filter: blur(0.2px);
+    filter: blur(0.2px); }
+
 * {
   margin: 0;
   padding: 0; }
