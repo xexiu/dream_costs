@@ -100,3 +100,25 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+.buttonScroll {
+  background: url(../img/pirate_boat.png) no-repeat;
+  width: 84px;
+  height: 54px;
+  bottom: 91px;
+  margin-left: 15px;
+  position: fixed;
+  display: none;
+  -webkit-filter: blur(.8px);
+  -moz-filter: blur(.8px);
+  -o-filter: blur(.8px);
+  -ms-filter: blur(.8px);
+  filter: blur(.8px);
+  &:hover {
+    -webkit-filter: blur(.2px);
+    -moz-filter: blur(.2px);
+    -o-filter: blur(.2px);
+    -ms-filter: blur(.2px);
+    filter: blur(.2px);
+  }
+}
