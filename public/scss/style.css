@@ -179,6 +179,7 @@ dl {
   padding: 10px;
   width: 900px;
   margin: 40px auto;
+  z-index: 2;
   opacity: .8; }
   #main span#logo {
     width: 190px;
@@ -299,12 +300,14 @@ dl {
     border-left: 0px solid #f1f1f1;
     border-right: 0px solid #f1f1f1; }
   #main article.view {
-    border-bottom: 2px dotted #f1f1f1; }
+    border-bottom: 2px dotted #f1f1f1;
+    position: relative;
+    z-index: 4; }
     #main article.view:hover {
       border-left: 2px solid transparent;
       border-right: 2px solid transparent;
-      background-color: black;
-      opacity: .8;
+      background-color: #e5e7da;
+      opacity: 1;
       color: white; }
   #main article header {
     text-align: left;
@@ -497,7 +500,7 @@ dl {
     border-bottom: 1px solid #f1f1f1;
     padding-bottom: 10px; }
     article p {
-      width: 100%;
+      width: 82%;
       margin-left: 70px;
       margin-top: -30px;
       float: left; }
