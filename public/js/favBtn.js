@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $('.fav-btn i').click(function(e){
     e.preventDefault();
-    $(this).toggleClass('fa-heart-o fa-heart');
-    // $(this).addClass('fa fa-heart fa-2x');
+    $(this).toggleClass('fa-star-o fa-star');
   });
 });
