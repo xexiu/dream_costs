@@ -369,6 +369,9 @@ dl {
         border-bottom: 1px solid #ccc;
         border-top: 1px solid #ccc;
       }
+      span.fav-btn {
+        margin-top: -40px;
+      }
       article:hover {
         border-left: 0px solid #f1f1f1;
         border-right: 0px solid #f1f1f1;
@@ -410,6 +413,9 @@ dl {
   section#important article:nth-child(even) img.img {
     float: left;
     margin-right: 10px;
+  }
+  span.fav-btn {
+    margin-top: -55px !important;
   }
   article {
     margin-top: 15px;
