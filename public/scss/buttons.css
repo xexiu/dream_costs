@@ -18,4 +18,13 @@
     -ms-filter: blur(0.2px);
     filter: blur(0.2px); }
 
+.fav-btn {
+  display: block !important;
+  width: 32px;
+  height: 32px;
+  float: left;
+  text-align: center;
+  margin-top: -40px;
+  margin-left: 2%; }
+
 /*# sourceMappingURL=buttons.css.map */
