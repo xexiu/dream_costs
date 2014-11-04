@@ -6,7 +6,7 @@ $(document).ready(function() {
       "position": "fixed"
     });
     var pageY = pageYOffset;
-    if (pageY > 619 && pageY < 760 ) {
+    if (pageY > 610 && pageY < 760 ) {
       $('#tag_1').addClass('active');
     }else{
       $('#tag_1').removeClass('active');
