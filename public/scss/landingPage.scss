@@ -1,13 +1,14 @@
-@import "media";
-@import "variables";
-@import "links";
-@import "mixins";
-@import "buttons";
-@import "border-commit";
+@import "media.scss";
+@import "variables.scss";
+@import "links.scss";
+@import "mixins.scss";
+@import "buttons.scss";
+@import "border-commit.scss";
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 html, body {
   background-color: #ecf0f1;
+  overflow-x: hidden;
   font-size: 16px;
   font-style: normal;
   line-height: 1;
@@ -23,8 +24,44 @@ html, body {
   padding: 0;
   margin: 0;
 }
-*:focus {
+*:focus {////////////////////??????????????????????????????
   outline: 0;
+}
+
+main {
+   -webkit-animation-name: gallery;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 4px #a1a1a1;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@include keyframes(gallery) {
+  0% {
+   background: url(../img/cover1.jpg) no-repeat;
+   @include gallery
+  }
+
+  50% {
+    background: url(../img/cover2.jpg) no-repeat;
+   @include gallery
+  }
+
+  75% {
+    background: url(../img/cover3.jpg) no-repeat;
+   @include gallery
+  }
+
+  100% {
+    background: url(../img/cover1.jpg) no-repeat;
+   @include gallery
+  }
 }
 
 .buttonUp {
@@ -40,36 +77,18 @@ html, body {
   display: none;
 }
 
-#main {
-  width: 100%;
-  height: 100%; // Sergio
-  margin: 0px auto;
-}
-
-div.contentHeader {
+nav.contentHeader {
   position: relative;
   top: 0;
   right: 0;
   padding: 20px;
 }
 
-header.header {
-  background: url(../img/cover.jpg) no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: relative;
-  box-shadow: 0px 0px 4px #a1a1a1;
-  width: 100%;
-  height: 100%; // Sergio - was 600px
-}
-
-header.header ul {
+nav.contentHeader ul {
   position: relative;
 }
 
-header.header ul li {
+nav.contentHeader ul li {
   list-style-type: none;
 }
 
@@ -104,7 +123,7 @@ ul.menupc li a {
   text-decoration:none;
   color: #ccc;
   display: inline-block;
-  line-height: 40px;
+  line-height: 40px;////////////////////??????????????????????
   &:hover {
     text-decoration: none;
     color: white;
@@ -112,16 +131,22 @@ ul.menupc li a {
 }
 
 section.sectionUp {
-  margin: 200px 0px 0px 350px;
+  position: relative;
+  left: 26%;
+  width: 70%;
 }
 
-article.articleUp {
+section.sectionUp article.articleUp {
   width: 70%;
 }
 
 h1.h1FirstTitle {
+  position: relative;
+  right: 10%;
   font: bold 40px 'Arial';
   text-shadow: 1px 2px #000000;
+  margin: 0;
+  padding: 0;
   color: #ffffff;
 }
 
@@ -129,6 +154,9 @@ h2.h2SecondTitle {
   font: bold 28px 'Arial';
   text-shadow: 1px 2px #000000;
   margin-top: 8px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   color: #eae8e3;
 }
 
@@ -147,11 +175,16 @@ div.divInfoIndexContent1 {
   height: 400px;
 }
 
-section#important {
-  background-color: #ffffff;
-  margin: 0 auto;
-  width: 75%;
-  height: 400px;
+div.register {
+  background-color: $colorShadow;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  box-shadow: 0px 2px 2px 2px  rgba(#000000, 0.5);
+  margin-right: -250px;
+  width: 250px;
+  height: 100%;
 }
 
 
@@ -169,19 +202,9 @@ section#important {
 }
 
 main {
-  margin: 0;
-  background-color: #f1f1f1;
-}
-
-div.contentHeader {
-  position: relative;
-  top: 0;
-  right: 0;
-  padding: 20px;
-}
-
-header.header {
-  background: url(../img/cover.jpg) no-repeat center fixed;
+   -webkit-animation-name: gallery;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -192,11 +215,40 @@ header.header {
   height: 100% !important;
 }
 
-header.header ul {
+@include keyframes(gallery) {
+  0% {
+   background: url(../img/cover1.jpg) no-repeat;
+   @include gallery
+  }
+
+  50% {
+    background: url(../img/cover2.jpg) no-repeat;
+   @include gallery
+  }
+
+  75% {
+    background: url(../img/cover3.jpg) no-repeat;
+   @include gallery
+  }
+
+  100% {
+    background: url(../img/cover1.jpg) no-repeat;
+   @include gallery
+  }
+}
+
+nav.contentHeader {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+nav.contentHeader ul {
   position: relative;
 }
 
-header.header ul li {
+nav.contentHeader ul li {
   list-style-type: none;
 }
 
@@ -210,7 +262,7 @@ li.logo {
   background-color: black;
 }
 
-header.header ul li.mainLink:nth-child(2) {
+nav.contentHeader ul li.mainLink:nth-child(2) {
   float: right;
   cursor: pointer;
   margin-top: -10px;
@@ -220,11 +272,11 @@ header.header ul li.mainLink:nth-child(2) {
   @include border-radius;
 }
 
-header.header ul li.mainLink i.target {
+nav.contentHeader ul li.mainLink i.target {
   color: #ccc;
 }
 
-header.header ul li.mainLink ul.dropDown {
+nav.contentHeader ul li.mainLink ul.dropDown {
   @include border-radius;//
   position: absolute;
   display: none;
@@ -250,19 +302,34 @@ ul.dropDown li a {
   }
 }
 
+section.sectionUp {
+  position: relative;
+  left: 10%;
+  width: 90%;
+}
+
+section.sectionUp article.articleUp {
+  width: 90%;
+}
+
 h1.h1FirstTitle {
+  position: relative;
+  right:  22%;
   font: bold 18px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin: 0;
+  padding: 0;
   color: #ffffff;
 }
 
 h2.h2SecondTitle {
   font: bold 14px 'Arial';
+  text-shadow: 1px 2px #000000;
   margin-top: 8px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   color: #eae8e3;
-}
-
-section.sectionUp {
-	margin: 80px 0px 0px 80px;
 }
 
 button.buttonUp {
@@ -276,9 +343,9 @@ button.buttonUp {
 //************************************************
 @include tablets {
 
-  article.articleUp {
-    width: 100%;
-  }
+  section.sectionUp article.articleUp {
+  width: 100%;
+}
 
   ul.menupc {
     display: none !important;
@@ -288,20 +355,10 @@ button.buttonUp {
    display: block !important;
  }
 
- main {
-  margin: 0;
-  background-color: #f1f1f1;
-}
-
-div.contentHeader {
-  position: relative;
-  top: 0;
-  right: 0;
-  padding: 20px;
-}
-
-header.header {
-  background: url(../img/cover.jpg) no-repeat center fixed;
+main {
+   -webkit-animation-name: gallery;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -312,11 +369,40 @@ header.header {
   height: 100% !important;
 }
 
-header.header ul {
+@include keyframes(gallery) {
+  0% {
+   background: url(../img/cover1.jpg) no-repeat;
+   @include gallery
+  }
+
+  50% {
+    background: url(../img/cover2.jpg) no-repeat;
+   @include gallery
+  }
+
+  75% {
+    background: url(../img/cover3.jpg) no-repeat;
+   @include gallery
+  }
+
+  100% {
+    background: url(../img/cover1.jpg) no-repeat;
+   @include gallery
+  }
+}
+
+nav.contentHeader {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+nav.contentHeader ul {
   position: relative;
 }
 
-header.header ul li {
+nav.contentHeader ul li {
   list-style-type: none;
 }
 
@@ -330,21 +416,21 @@ li.logo {
   background-color: black;
 }
 
-header.header ul li.mainLink:nth-child(2) {
+nav.contentHeader ul li.mainLink:nth-child(2) {
   float: right;
   cursor: pointer;
   margin-top: -10px;
-    padding: 0px 4px 0px 4px; // Sergio
-    background-color: #222; // Sergio
-    box-shadow: inset 40px 10px 10px rgba(255,255,255,.1); // Sergio
-    @include border-radius; // Sergio
+    padding: 0px 4px 0px 4px;
+    background-color: #222;
+    box-shadow: inset 40px 10px 10px rgba(255,255,255,.1);
+    @include border-radius;
   }
 
-  header.header ul li.mainLink i.target {
-    color: #ccc; // Sergio
+  nav.contentHeader ul li.mainLink i.target {
+    color: #ccc;
   }
 
-  header.header ul li.mainLink ul.dropDown {
+  nav.contentHeader ul li.mainLink ul.dropDown {
     @include border-radius;//
     position: absolute;
     display: none;
@@ -370,20 +456,35 @@ header.header ul li.mainLink:nth-child(2) {
     }
   }
 
-  h1.h1FirstTitle {
-    font: bold 30px 'Arial';
-    color: #ffffff;
-  }
+section.sectionUp {
+  position: relative;
+  left: 24%;
+  width: 90%;
+}
 
-  h2.h2SecondTitle {
-    font: bold 23px 'Arial';
-    margin-top: 8px;
-    color: #eae8e3;
-  }
+section.sectionUp article.articleUp {
+  width: 90%;
+}
 
-  section.sectionUp {
-    margin: 150px 0px 0px 190px;
-  }
+h1.h1FirstTitle {
+  position: relative;
+  right: 11%;
+  font: bold 30px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+h2.h2SecondTitle {
+  font: bold 23px 'Arial';
+  text-shadow: 1px 2px #000000;
+  margin-top: 8px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #eae8e3;
+}
 
   button.buttonUp {
     @include btn-blueIndex;

@@ -30,6 +30,7 @@
 
 html, body {
   background-color: #ecf0f1;
+  overflow-x: hidden;
   font-size: 16px;
   font-style: normal;
   line-height: 1;
@@ -47,6 +48,106 @@ html, body {
 *:focus {
   outline: 0; }
 
+main {
+  -webkit-animation-name: gallery;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 4px #a1a1a1;
+  width: 100% !important;
+  height: 100% !important; }
+
+@-webkit-keyframes gallery {
+  0% {
+    background: url(../img/cover1.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  50% {
+    background: url(../img/cover2.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  75% {
+    background: url(../img/cover3.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  100% {
+    background: url(../img/cover1.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; } }
+@-moz-keyframes gallery {
+  0% {
+    background: url(../img/cover1.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  50% {
+    background: url(../img/cover2.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  75% {
+    background: url(../img/cover3.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  100% {
+    background: url(../img/cover1.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; } }
+@keyframes gallery {
+  0% {
+    background: url(../img/cover1.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  50% {
+    background: url(../img/cover2.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  75% {
+    background: url(../img/cover3.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; }
+  100% {
+    background: url(../img/cover1.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0; } }
 .buttonUp {
   text-shadow: 0px 0px #808080, 0px 0px #808080;
   box-shadow: 0px 2px 5px #303030; }
@@ -57,32 +158,16 @@ html, body {
 .displaypc {
   display: none; }
 
-#main {
-  width: 100%;
-  height: 100%;
-  margin: 0px auto; }
-
-div.contentHeader {
+nav.contentHeader {
   position: relative;
   top: 0;
   right: 0;
   padding: 20px; }
 
-header.header {
-  background: url(../img/cover.jpg) no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: relative;
-  box-shadow: 0px 0px 4px #a1a1a1;
-  width: 100%;
-  height: 100%; }
-
-header.header ul {
+nav.contentHeader ul {
   position: relative; }
 
-header.header ul li {
+nav.contentHeader ul li {
   list-style-type: none; }
 
 li.logo {
@@ -124,20 +209,29 @@ ul.menupc li a {
     color: white; }
 
 section.sectionUp {
-  margin: 200px 0px 0px 350px; }
+  position: relative;
+  left: 26%;
+  width: 70%; }
 
-article.articleUp {
+section.sectionUp article.articleUp {
   width: 70%; }
 
 h1.h1FirstTitle {
+  position: relative;
+  right: 10%;
   font: bold 40px 'Arial';
   text-shadow: 1px 2px #000000;
+  margin: 0;
+  padding: 0;
   color: #ffffff; }
 
 h2.h2SecondTitle {
   font: bold 28px 'Arial';
   text-shadow: 1px 2px #000000;
   margin-top: 8px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   color: #eae8e3; }
 
 button.buttonUp {
@@ -163,11 +257,16 @@ div.divInfoIndexContent1 {
   background-color: #ff6600;
   height: 400px; }
 
-section#important {
-  background-color: #ffffff;
-  margin: 0 auto;
-  width: 75%;
-  height: 400px; }
+div.register {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-right: -250px;
+  width: 250px;
+  height: 100%; }
 
 @media only screen and (min-width: 300px) and (max-width: 580px) {
   .displaypc {
@@ -177,17 +276,9 @@ section#important {
     display: none !important; }
 
   main {
-    margin: 0;
-    background-color: #f1f1f1; }
-
-  div.contentHeader {
-    position: relative;
-    top: 0;
-    right: 0;
-    padding: 20px; }
-
-  header.header {
-    background: url(../img/cover.jpg) no-repeat center fixed;
+    -webkit-animation-name: gallery;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -197,10 +288,103 @@ section#important {
     width: 100% !important;
     height: 100% !important; }
 
-  header.header ul {
+  @-webkit-keyframes gallery {
+    0% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    50% {
+      background: url(../img/cover2.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    75% {
+      background: url(../img/cover3.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    100% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; } }
+  @-moz-keyframes gallery {
+    0% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    50% {
+      background: url(../img/cover2.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    75% {
+      background: url(../img/cover3.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    100% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; } }
+  @keyframes gallery {
+    0% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    50% {
+      background: url(../img/cover2.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    75% {
+      background: url(../img/cover3.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    100% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; } }
+  nav.contentHeader {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 20px; }
+
+  nav.contentHeader ul {
     position: relative; }
 
-  header.header ul li {
+  nav.contentHeader ul li {
     list-style-type: none; }
 
   li.logo {
@@ -215,7 +399,7 @@ section#important {
     border-radius: 25px;
     background-color: black; }
 
-  header.header ul li.mainLink:nth-child(2) {
+  nav.contentHeader ul li.mainLink:nth-child(2) {
     float: right;
     cursor: pointer;
     margin-top: -10px;
@@ -227,10 +411,10 @@ section#important {
     -ms-border-radius: 5px;
     border-radius: 5px; }
 
-  header.header ul li.mainLink i.target {
+  nav.contentHeader ul li.mainLink i.target {
     color: #ccc; }
 
-  header.header ul li.mainLink ul.dropDown {
+  nav.contentHeader ul li.mainLink ul.dropDown {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -259,17 +443,31 @@ section#important {
       -ms-border-radius: 5px;
       border-radius: 5px; }
 
+  section.sectionUp {
+    position: relative;
+    left: 10%;
+    width: 90%; }
+
+  section.sectionUp article.articleUp {
+    width: 90%; }
+
   h1.h1FirstTitle {
+    position: relative;
+    right: 22%;
     font: bold 18px 'Arial';
+    text-shadow: 1px 2px #000000;
+    margin: 0;
+    padding: 0;
     color: #ffffff; }
 
   h2.h2SecondTitle {
     font: bold 14px 'Arial';
+    text-shadow: 1px 2px #000000;
     margin-top: 8px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     color: #eae8e3; }
-
-  section.sectionUp {
-    margin: 80px 0px 0px 80px; }
 
   button.buttonUp {
     background-color: #2ba6cb;
@@ -287,7 +485,7 @@ section#important {
     cursor: pointer;
     font-size: 14px; } }
 @media only screen and (min-width: 580px) and (max-width: 940px) {
-  article.articleUp {
+  section.sectionUp article.articleUp {
     width: 100%; }
 
   ul.menupc {
@@ -297,17 +495,9 @@ section#important {
     display: block !important; }
 
   main {
-    margin: 0;
-    background-color: #f1f1f1; }
-
-  div.contentHeader {
-    position: relative;
-    top: 0;
-    right: 0;
-    padding: 20px; }
-
-  header.header {
-    background: url(../img/cover.jpg) no-repeat center fixed;
+    -webkit-animation-name: gallery;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -317,10 +507,103 @@ section#important {
     width: 100% !important;
     height: 100% !important; }
 
-  header.header ul {
+  @-webkit-keyframes gallery {
+    0% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    50% {
+      background: url(../img/cover2.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    75% {
+      background: url(../img/cover3.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    100% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; } }
+  @-moz-keyframes gallery {
+    0% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    50% {
+      background: url(../img/cover2.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    75% {
+      background: url(../img/cover3.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    100% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; } }
+  @keyframes gallery {
+    0% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    50% {
+      background: url(../img/cover2.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    75% {
+      background: url(../img/cover3.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; }
+    100% {
+      background: url(../img/cover1.jpg) no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0; } }
+  nav.contentHeader {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 20px; }
+
+  nav.contentHeader ul {
     position: relative; }
 
-  header.header ul li {
+  nav.contentHeader ul li {
     list-style-type: none; }
 
   li.logo {
@@ -335,7 +618,7 @@ section#important {
     border-radius: 25px;
     background-color: black; }
 
-  header.header ul li.mainLink:nth-child(2) {
+  nav.contentHeader ul li.mainLink:nth-child(2) {
     float: right;
     cursor: pointer;
     margin-top: -10px;
@@ -347,10 +630,10 @@ section#important {
     -ms-border-radius: 5px;
     border-radius: 5px; }
 
-  header.header ul li.mainLink i.target {
+  nav.contentHeader ul li.mainLink i.target {
     color: #ccc; }
 
-  header.header ul li.mainLink ul.dropDown {
+  nav.contentHeader ul li.mainLink ul.dropDown {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -379,17 +662,31 @@ section#important {
       -ms-border-radius: 5px;
       border-radius: 5px; }
 
+  section.sectionUp {
+    position: relative;
+    left: 24%;
+    width: 90%; }
+
+  section.sectionUp article.articleUp {
+    width: 90%; }
+
   h1.h1FirstTitle {
+    position: relative;
+    right: 11%;
     font: bold 30px 'Arial';
+    text-shadow: 1px 2px #000000;
+    margin: 0;
+    padding: 0;
     color: #ffffff; }
 
   h2.h2SecondTitle {
     font: bold 23px 'Arial';
+    text-shadow: 1px 2px #000000;
     margin-top: 8px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     color: #eae8e3; }
-
-  section.sectionUp {
-    margin: 150px 0px 0px 190px; }
 
   button.buttonUp {
     background-color: #2ba6cb;

@@ -1,24 +1,18 @@
 $(document).ready(function(){
 
 $('.openRegister').click(function(e){
+   e.stopPropagation();
  $('.register').css({
-	'display':'block'
+  'display':'block'
  });
  $('.register').animate({
- 	'margin-right':'+=250',
+  'margin-right':'0',
  }, 'slow');
-
- e.stopPropagation();
 });
 
 $(document).click(function(e){
-  $(this).css({
-	'display':'none'
-  });
-e.stopPropagation();
+    $('.register').animate({
+    'margin-right':'-250',
+ }, 'slow');
 });
-
 });
-
-
-
